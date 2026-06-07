@@ -1,52 +1,39 @@
-
 const express = require("express");
-
 const mongoose = require("mongoose");
-
 const cors = require("cors");
-
 require("dotenv").config();
 
 const Contact = require("./models/Contact");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
-
 .then(() => {
     console.log("MongoDB Connected");
 })
-
 .catch((err) => {
     console.log(err);
 });
-//route
+
+app.get("/", (req, res) => {
+    res.send("Backend Running");
+});
 
 app.post("/contact", async (req, res) => {
 
     try {
 
-        console.log(req.body);
-
-        const newContact = new Contact({
-
-            name: req.body.name,
-
-            email: req.body.email,
-
-            message: req.body.message
-
-        });
+        const newContact = new Contact(req.body);
 
         await newContact.save();
 
-        console.log("Data Saved");
-
-        res.status(200).json({
+        res.json({
             message: "Thank you for messaging!"
         });
 
@@ -54,7 +41,7 @@ app.post("/contact", async (req, res) => {
 
     catch (error) {
 
-        console.log("ERROR:", error);
+        console.log(error);
 
         res.status(500).json({
             message: "Error saving message"
@@ -67,7 +54,5 @@ app.post("/contact", async (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-
     console.log(`Server running on port ${PORT}`);
-
 });
