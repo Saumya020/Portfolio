@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saumya Portfolio</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class = "navbar">
+    <h1 class="logo">SV</h1>
+
+    <ul class ="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- home Section -->
+  <section id = "home" class="hero">
+ <div class="hero-image">
+      <img src="image.jpeg" alt="">
+    </div>
+    <div class="hero-text">
+      <h2>Hello, I'm</h2>
+      <h1>Saumya Verma</h1>
+
+      <p>
+        Frontend Developer 
+      </p>
+      <div class = "social-icons">
+      <a href="https://www.linkedin.com/in/saumya-verma-5394a4316/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://instagram.com/_saumya_verma07" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://github.com/Saumya020" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  
+    </div>
+    <br>
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section  id = "about"class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+      Aspiring Frontend Developer passionate about creating responsive and user-friendly web interfaces using HTML and CSS. 
+      Currently learning Java and exploring JavaScript, Node.js, and MongoDB to grow toward full-stack development.
+    </p>
+
+  </section>
+
+  <!-- Skills -->
+  <section id = "skills" class="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill-box">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">Basics of Java</div>
+      <div class="card">Canva</div>
+      <div class="card">MongoDB</div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+  <section  id ="projects"class="projects">
+
+    <h2>Projects</h2>
+  
+    <div class="project-container">
+
+      <div class="project-card">
+        <h3>LinkedIn Clone</h3>
+        <br>
+        <p>Responsive LinkedIn clone with API integration and interactive frontend UI.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+    
+    <div class="info">
+    <a href="tel:9235556900">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+     <p>Phone: <a href ="tel:9235556900">9235556900</a></p>
+    </div>
+    <br>
+    <div class = "info">      
+    <a href="mailto:saumyaverma0200@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <p>Email: <a href ="mailto:saumyaverma0200@gmail.com">saumyaverma0200@gmail.com</a></p>
+    
+  
+  </div>
+ 
+  </section>
+  <form id="contactForm">
+
+  <input type="text" id="name" placeholder="Name">
+
+  <input type="email" id="email" placeholder="E-mail: abc@email.com">
+
+  <textarea id="message"></textarea>
+
+  <button type="submit">Send Message</button>
+
+</form>
+ <p id="successMessage"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
