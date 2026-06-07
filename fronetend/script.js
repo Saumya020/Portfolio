@@ -18,7 +18,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("https://git-hub-profile-chi-rose.vercel.app/", {
+        const response = await fetch("https://portfolio-sepia-omega-99.vercel.app/", {
 
             method: "POST",
 
