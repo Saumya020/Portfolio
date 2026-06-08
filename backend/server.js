@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const Contact = require("./models/Contact");
+const Contact = require("../models/Contact");
 
 const app = express();
 
@@ -14,12 +14,8 @@ app.use(cors({
 app.use(express.json());
 
 mongoose.connect(process.env.DATABASE_URL)
-.then(() => {
-    console.log("MongoDB Connected");
-})
-.catch((err) => {
-    console.log(err);
-});
+.then(() => console.log("MongoDB Connected"))
+.catch((err) => console.log(err));
 
 app.get("/", (req, res) => {
     res.send("Backend Running");
@@ -37,9 +33,7 @@ app.post("/contact", async (req, res) => {
             message: "Thank you for messaging!"
         });
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.log(error);
 
@@ -51,8 +45,4 @@ app.post("/contact", async (req, res) => {
 
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+module.exports = app;
