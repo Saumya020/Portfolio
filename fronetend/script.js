@@ -16,9 +16,9 @@ form.addEventListener("submit", async (e) => {
 
     };
 
-    try {
+    try {https:
 
-        const response = await fetch("https://portfolio-4g27.vercel.app/contact", {
+        const response = await fetch("https://portfolio-4g27.vercel.app/", {
 
             method: "POST",
 
